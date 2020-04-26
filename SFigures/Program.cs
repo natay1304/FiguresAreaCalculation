@@ -10,8 +10,13 @@ namespace SFigures
     {
         static void Main(string[] args)
         {
-            Triangle triangle = new Triangle(4, 3, 5);
-            Console.WriteLine(triangle.CalculateArea());
+            var triangle = new Triangle(4, 3, 6);
+            var calculateArea = new CalculateArea(triangle);
+            calculateArea.CalculateAreaOfFigure();
+
+            var circle = new Circle(5);
+            calculateArea.SetStragedy(circle);
+            calculateArea.CalculateAreaOfFigure();
         }
     }
 }

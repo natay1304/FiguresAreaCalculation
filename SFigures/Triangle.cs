@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 
 namespace SFigures
 {
-    class Triangle : IAreaCalculate
+    public class Triangle : IAreaCalculate
     {
         private double side1, side2, side3;
 
         public Triangle(double side1, double side2, double side3)
         {
-            this.side1 = side1;
-            this.side2 = side2;
-            this.side3 = side3;
+            if(side1 > 0 && side2 > 0 && side3 > 0)
+            {
+                this.side1 = side1;
+                this.side2 = side2;
+                this.side3 = side3;
+            }
         }
 
         public double CalculateArea()
@@ -22,7 +25,7 @@ namespace SFigures
             Console.WriteLine(CheckSquare());
             double area;
             double halfP = (side1 + side2 + side3) / 2;
-            Console.WriteLine("Площадь треугольника:");
+            Console.Write("Площадь треугольника: ");
             return area = Math.Sqrt(halfP * (halfP - side1) * (halfP - side2) * (halfP - side3));
         }
 

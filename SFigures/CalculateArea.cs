@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SFigures
 {
-    class CalculateArea
+    public class CalculateArea
     {
         private IAreaCalculate areaCalculate;
         public CalculateArea(IAreaCalculate areaCalculate)
@@ -14,9 +14,14 @@ namespace SFigures
             this.areaCalculate = areaCalculate;
         }
 
+        public void SetStragedy(IAreaCalculate areaCalculate)
+        {
+            this.areaCalculate = areaCalculate;
+        }
+
         public void CalculateAreaOfFigure()
         {
-            areaCalculate.CalculateArea();
+            Console.WriteLine(areaCalculate.CalculateArea());
         }
     }
 }

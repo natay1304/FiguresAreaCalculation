@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SFigures
+namespace UnitTest
 {
-    public interface IAreaCalculate
+    class Program
     {
-        double CalculateArea();
+        static void Main(string[] args)
+        {
+        }
     }
 }

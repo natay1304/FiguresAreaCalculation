@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace SFigures
 {
-    class Circle : IAreaCalculate
+    public class Circle : IAreaCalculate
     {
         private double radius;
         
         public Circle(double radius)
         {
-            this.radius = radius;
+            if(radius > 0)
+                this.radius = radius;
         }
 
         public double CalculateArea()
         {
-            Console.WriteLine("Площадь круга:");
+            Console.Write("Площадь круга: ");
             return Math.PI * Math.Pow(radius, 2);
         }
     }
